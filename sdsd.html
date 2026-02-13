@@ -74,40 +74,38 @@ button {
     <button id="noBtn">No 🙈</button>
 </div>
 
+<audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+</audio>
+
 <script>
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 const question = document.getElementById("question");
 
 let size = 18;
+let clickCount = 0;
 
 const noMessages = [
     "Are you sure Areej? 🥺",
     "Think again 😭",
     "Ullu will cry 🦉💔",
-    "Don't break Ullu's heart 💔",
+    "Don’t break Ullu's heart 💔",
     "Last chance princess 👑",
-    "You can't escape love 😌"
+    "You can’t escape love 😌"
 ];
 
-let clickCount = 0;
-
 noBtn.addEventListener("click", function() {
-
     if (clickCount < noMessages.length) {
         question.innerHTML = noMessages[clickCount];
     }
-
     clickCount++;
-
     size += 10;
     yesBtn.style.fontSize = size + "px";
 });
 
 yesBtn.addEventListener("click", function() {
-
     question.innerHTML = "WAITTTT 😳💘<br><br>Areej… are you REALLY sure you want to be Ullu's Valentine forever? 🥹💕";
-
     noBtn.style.display = "none";
     yesBtn.innerHTML = "YES ULLU I AM SURE 💍💖";
 
@@ -131,8 +129,8 @@ function createHeart() {
 }
 
 setInterval(createHeart, 500);
-
 </script>
 
 </body>
 </html>
+
